@@ -5,14 +5,14 @@ on:
         branches:
             - main # 또는 워크플로우를 트리거하고 싶은 브랜치 이름
     schedule:
-        - cron: "0 0 * * *" # 매일 자정에 실행
+        - cron: "0 23 * * *" # 매일 자정에 실행
 
 jobs:
     update_blog:
         runs-on: ubuntu-latest
 
         steps:
-            - name: Checkout
+            - name: Checkouts
               uses: actions/checkout@v2
 
             - name: Push changes
